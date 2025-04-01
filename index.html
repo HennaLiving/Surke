@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surke</title>
+    <!-- Link to external CSS stylesheet and favicon -->
+    <link rel="stylesheet" href="color.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <!-- Header section with logo and navigation -->
+    <header>
+        <!-- Logo wrapped in a link to return to homepage -->
+        <a href="/" class="logo">
+            <img src="surke.png" alt="Surke Logo" loading="lazy">
+        </a>
+        <!-- Navigation with ARIA roles for accessibility -->
+        <nav role="navigation" aria-label="Main navigation">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">SIGN IN</a></li>
+                <li><a href="#">ADD</a></li>
+                <li><a href="#" class="contact-btn">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero section with background image and call-to-action -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Main heading with styled span for emphasis -->
+            <h1>Help Us <br>Explore Better: <br><span>Share Your Thoughts!</span></h1>
+            <!-- Button to start survey, with type attribute for clarity -->
+            <button type="button" class="survey-btn">Start Survey!</button>
+        </div>
+    </section>
+
+    <!-- Survey info section explaining feedback importance -->
+    <section class="survey-info">
+        <!-- Link to feedback explanation -->
+        <a href="#" class="feedback-link">Why Your Feedback Matters Survey?</a>
+        <p>Take a moment to fill out the survey below and let us know how we did. Your feedback is essential in helping us shape the future of travel, ensuring it’s as exciting, seamless, and fulfilling as possible. Thank you for being part of the journey!</p>
+    </section>
+
+    <!-- Travel categories section showcasing options -->
+    <section class="travel-categories">
+        <!-- Individual category with image and label -->
+        <div class="category">
+            <img src="temple.jpg" alt="Temple Landscape" loading="lazy">
+            <p>Temple</p>
+        </div>
+        <div class="category">
+            <img src="beach-island.jpg" alt="Beach and Island View" loading="lazy">
+            <p>Beach & Island</p>
+        </div>
+        <div class="category">
+            <img src="waterfall.jpg" alt="Waterfall Scenery" loading="lazy">
+            <p>Water Fall</p>
+        </div>
+        <div class="category">
+            <img src="museum.jpg" alt="Museum Exterior" loading="lazy">
+            <p>Museum</p>
+        </div>
+    </section>
+
+    <!-- Destinations section highlighting specific locations -->
+    <section class="destinations">
+        <!-- Angkor Wat destination with text overlay -->
+        <div class="destination angkor-wat">
+            <div class="destination-text-overlay">
+                <h2>Angkor Wat</h2>
+                <p>Angkor is one of the most important archaeological sites in South-East Asia. Angkor is therefore a major site exemplifying cultural, religious and symbolic values, as well as containing high architectural, and artistic significance.</p>
+            </div>
+        </div>
+
+        <!-- Koh Rong destination with text overlay -->
+        <div class="destination koh-rong">
+            <div class="destination-text-overlay">
+                <h2>Koh Rong</h2>
+                <p>A fishing village turned ultimate holiday destination, Koh Rong Island is the next big destination in South East Asia. It is a stunning island in Cambodia known for its pristine beaches, clear waters and lush tropical landscapes.</p>
+            </div>
+        </div>
+
+        <!-- Royal Palace destination with text overlay -->
+        <div class="destination royal-place">
+            <div class="destination-text-overlay">
+                <h2>Royal Palace</h2>
+                <p>The Royal Palace in Phnom Penh is a historical landmark. Serving as the official residence of the Cambodian King, it’s known as the Preah Barom Reacheaveang Chaktomuk Serey Mongkol in Khmer. This grand palace houses the famous Silver Pagoda.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section with dynamic copyright and links -->
+    <footer>
+        <!-- Copyright with dynamic year updated via JavaScript -->
+        <p>© <span id="year"></span> Surke. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </footer>
+
+    <!-- JavaScript to dynamically set the current year -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
