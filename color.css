@@ -1,0 +1,365 @@
+/* Define CSS custom properties for reusable values */
+:root {
+    --primary-padding: 20px 50px; /* Standard padding for sections */
+    --secondary-color: #ff4d4d;    /* Primary action color (red) */
+    --text-color: #333;           /* Default text color */
+    --light-gray: #d3d3d3;        /* Background and accent color */
+    --header-bg: #e0e0e0;         /* Header and footer background */
+}
+
+/* Reset default browser styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif; /* Fallback fonts for compatibility */
+}
+
+/* Set body background color */
+body {
+    background-color: var(--light-gray);
+}
+
+/* Style the header with flexbox for layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--primary-padding);
+    background-color: var(--header-bg);
+}
+
+/* Style the logo image */
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* Style the navigation list */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Space between nav items */
+}
+
+/* Style navigation links */
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+/* Style the contact button in navigation */
+nav ul li .contact-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* Hover effect for contact button */
+nav ul li .contact-btn:hover {
+    background-color: #e03e3e; /* Darker red */
+    transition: background-color 0.3s ease;
+}
+
+/* Focus state for accessibility */
+nav ul li .contact-btn:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* Style the hero section with background image */
+.hero {
+    height: 500px;
+    background-image: url('airplane.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    border: 2px solid #b0b0b0;
+    border-radius: 10px;
+    margin: 20px 50px;
+    position: relative; /* For overlay positioning */
+}
+
+/* Add a dark overlay to improve text contrast */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Style the hero content */
+.hero-content {
+    max-width: 50%;
+    position: relative;
+    z-index: 2; /* Place above overlay */
+}
+
+/* Style the hero heading */
+.hero-content h1 {
+    font-size: 48px;
+    color: white;
+    line-height: 1.2;
+}
+
+/* Style the span within the hero heading */
+.hero-content h1 span {
+    color: var(--light-gray);
+}
+
+/* Style the survey button */
+.survey-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Hover effect for survey button */
+.survey-btn:hover {
+    background-color: #e03e3e;
+    transition: background-color 0.3s ease;
+}
+
+/* Focus state for survey button */
+.survey-btn:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* Style the survey info section */
+.survey-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--primary-padding);
+    margin: 0 50px;
+}
+
+/* Style the feedback link */
+.feedback-link {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hover effect for feedback link */
+.feedback-link:hover {
+    background-color: #e03e3e;
+    transition: background-color 0.3s ease;
+}
+
+/* Style the survey info paragraph */
+.survey-info p {
+    max-width: 50%;
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Style the travel categories section */
+.travel-categories {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 50px;
+    margin: 0 50px;
+}
+
+/* Style individual category items */
+.category {
+    text-align: center;
+}
+
+/* Style category images */
+.category img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Style category labels */
+.category p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Hover effect for category images */
+.category img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Style the destinations section */
+.destinations {
+    padding: 40px 50px;
+    margin: 0 50px;
+}
+
+/* Style individual destination items */
+.destination {
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Style the text overlay in destinations */
+.destination-text-overlay {
+    width: 40%;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* Style destination heading */
+.destination-text-overlay h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+/* Style destination paragraph */
+.destination-text-overlay p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+/* Specific styles for each destination */
+.angkor-wat {
+    background-image: url('angkor-wat.jpg');
+    flex-direction: row-reverse; /* Text on left */
+    padding: 30px;
+}
+
+.koh-rong {
+    background-image: url('KohRong.png');
+    flex-direction: row; /* Text on right */
+    padding: 30px;
+}
+
+.royal-place {
+    background-image: url('RoyalPalace.jpg');
+    flex-direction: row-reverse; /* Text on left */
+    padding: 30px;
+}
+
+/* Responsive design adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Stack header elements vertically */
+    header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    /* Stack navigation items */
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    /* Reduce hero section height and padding */
+    .hero {
+        height: 300px;
+        padding: 20px;
+    }
+    /* Shrink hero heading font size */
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    /* Stack survey info elements */
+    .survey-info {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    /* Stack travel categories */
+    .travel-categories {
+        flex-direction: column;
+        gap: 30px;
+    }
+    /* Reduce category image size */
+    .category img {
+        width: 120px;
+        height: 120px;
+    }
+    /* Stack destination content */
+    .destination {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        justify-content: center;
+    }
+    /* Full-width text overlay on small screens */
+    .destination-text-overlay {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+/* Style the footer section */
+footer {
+    padding: var(--primary-padding);
+    background-color: var(--header-bg);
+    text-align: center;
+}
+
+/* Style footer paragraph */
+footer p {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+/* Style footer navigation list */
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Style footer links */
+footer ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+/* Hover effect for footer links */
+footer ul li a:hover {
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
