@@ -259,7 +259,7 @@ nav ul li .contact-btn:focus {
 
 /* Specific styles for each destination */
 .angkor-wat {
-    background-image: url('angkor-wat.jpg');
+    background-image: url('Angkor-wat.jpg');
     flex-direction: row-reverse; /* Text on left */
     padding: 30px;
 }
